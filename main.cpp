@@ -15,24 +15,18 @@ void print(vector<int> &vec){
 }
 
 int main(){
-    int O, G1, G2, B;
+    int O = 0, G1 = 0, G2 = 0, B = 0;
     cin >> O;
     cin >> G1;
     cin >> G2;
     cin >> B;
-
-    vector<int> pos(B);
-    for(int i = 0; i < pos.size(); i++){
-        int tmp;
+    int tam = B;
+    for(int i = 0; i < tam; i++){
+        int tmp = 0;
         cin >> tmp;
-        pos[i] = tmp;
-    }
-    for(int i = 0; i < pos.size(); i++){
-        if(pos[i] <= G1 || pos[i] >= G2){
+        if(tmp <= G1 || tmp >= G2) {
             B--;
-            // cout << pos[i] << endl;
         }
     }
     cout << B << endl;
-    // print(pos);
 }
